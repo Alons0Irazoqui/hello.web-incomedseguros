@@ -208,6 +208,7 @@ button { font-family: inherit; }
   justify-content: space-between;
   height: 112px;
 }
+@media (min-width: 900px) { .nav-inner { height: 152px; } }
 
 .nav-logo {
   display: flex; align-items: center; gap: 16px;
@@ -216,6 +217,11 @@ button { font-family: inherit; }
 .nav-logo-principal { height: 84px; width: auto; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 0 6px rgba(255,255,255,0.85)) drop-shadow(0 0 2px rgba(255,255,255,0.9)); }
 .nav-logo-secondary { height: 62px; width: auto; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 0 6px rgba(255,255,255,0.85)) drop-shadow(0 0 2px rgba(255,255,255,0.9)); }
 .nav-logo-divider { width: 1px; height: 60px; background: var(--border); flex-shrink: 0; }
+@media (min-width: 900px) {
+  .nav-logo-principal { height: 122px; }
+  .nav-logo-secondary { height: 94px; }
+  .nav-logo-divider { height: 84px; }
+}
 
 .nav-links {
   display: none; list-style: none; gap: 38px; align-items: center;
@@ -336,14 +342,29 @@ button { font-family: inherit; }
   pointer-events: none;
 }
 
+/* Mapfre — centered feature logo, above the headline */
+.hero-mapfre {
+  position: relative; z-index: 4;
+  display: flex; justify-content: center;
+  padding-top: 168px;
+}
+.hero-mapfre-logo {
+  height: 52px; width: auto; object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 6px 20px rgba(0,0,0,0.4));
+}
+@media (min-width: 768px) {
+  .hero-mapfre { padding-top: 196px; }
+  .hero-mapfre-logo { height: 68px; }
+}
+
 /* Hero content */
 .hero-content {
   position: relative; z-index: 4;
   max-width: 900px;
-  padding: 160px 20px 100px;
+  padding: 32px 20px 100px;
   text-align: left;
 }
-@media (min-width: 768px) { .hero-content { padding: 180px 0 120px; } }
+@media (min-width: 768px) { .hero-content { padding: 36px 0 120px; } }
 
 /* Badge */
 .hero-badge {
