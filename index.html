@@ -23,6 +23,21 @@
 </head>
 <body>
 
+  <!-- SVG filter: crisp "sticker" outline used on logos over the dark hero/nav -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="sticker-outline" x="-40%" y="-40%" width="180%" height="180%">
+        <feMorphology in="SourceAlpha" operator="dilate" radius="2.5" result="dilated"/>
+        <feFlood flood-color="#ffffff" flood-opacity="1" result="white"/>
+        <feComposite in="white" in2="dilated" operator="in" result="outline"/>
+        <feMerge>
+          <feMergeNode in="outline"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+
   <!-- ══════════════════════════════════════════════════════
        LOADER
   ══════════════════════════════════════════════════════ -->

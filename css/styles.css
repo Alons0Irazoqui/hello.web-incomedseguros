@@ -214,9 +214,11 @@ button { font-family: inherit; }
   display: flex; align-items: center; gap: 16px;
   text-decoration: none; cursor: pointer;
 }
-.nav-logo-principal { height: 84px; width: auto; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 0 6px rgba(255,255,255,0.85)) drop-shadow(0 0 2px rgba(255,255,255,0.9)); }
-.nav-logo-secondary { height: 62px; width: auto; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 0 6px rgba(255,255,255,0.85)) drop-shadow(0 0 2px rgba(255,255,255,0.9)); }
+.nav-logo-principal { height: 84px; width: auto; object-fit: contain; flex-shrink: 0; filter: url(#sticker-outline) drop-shadow(0 3px 6px rgba(0,0,0,0.35)); transition: filter 0.4s ease; }
+.nav-logo-secondary { height: 62px; width: auto; object-fit: contain; flex-shrink: 0; filter: url(#sticker-outline) drop-shadow(0 3px 6px rgba(0,0,0,0.35)); transition: filter 0.4s ease; }
 .nav-logo-divider { width: 1px; height: 60px; background: var(--border); flex-shrink: 0; }
+#navbar.scrolled .nav-logo-principal,
+#navbar.scrolled .nav-logo-secondary { filter: none; }
 @media (min-width: 900px) {
   .nav-logo-principal { height: 122px; }
   .nav-logo-secondary { height: 94px; }
@@ -350,7 +352,7 @@ button { font-family: inherit; }
 }
 .hero-mapfre-logo {
   height: 52px; width: auto; object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 6px 20px rgba(0,0,0,0.4));
+  filter: url(#sticker-outline) drop-shadow(0 4px 10px rgba(0,0,0,0.4));
 }
 @media (min-width: 768px) {
   .hero-mapfre { padding-top: 196px; }
